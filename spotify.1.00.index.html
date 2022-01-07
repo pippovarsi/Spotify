@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist Page</title>
+    <link rel="stylesheet" href="spotify.1.00.style.css">
+</head>
+
+<body>
+
+    <main id="flex-container">
+
+        <section class="flex-child left-section">
+
+            <ul id="home-search-library" class="list">
+                <li><span class="icon spotify-icon"></span><span class="text">Spotify</span></li>
+                <li><span class="icon home-icon"></span><span class="text mouseover">Home</span></li>
+                <li><span class="icon search-icon"></span><span class="text mouseover">Cerca</span></li>
+                <li><span class="icon mylibrary-icon"></span><span class="text mouseover">La tua Libreria</span></li>
+            </ul>
+
+            <ul class="list playlist-setup">
+                <li><span class="icon createplaylist-icon"></span><span class="tex mouseovert">Crea Plylist</span></li>
+                <li><span class="icon preferredsong-icon"></span><span class="text mouseover">Brani Preferiti</span></li>
+                <li>
+                    <hr id="breakline">
+                </li>
+            </ul>
+
+            <ul class="list playlist">
+                <li class="mouseover">TropicHouse 2021<span class="icon playingtime-icon"></span></li>
+                <li class="mouseover">Rock'n' Roll Classic</li>
+                <li class="mouseover">Jack Savoretti Best Of</li>
+            </ul>
+        </section>
+
+        <section class="flex-child central-section">
+
+            <section class="header-container">
+
+                <span class="playlist-img header-child"></span>
+                <ul class="playlist-feature header-child">
+                    <li id="playlist-item"><strong>Playlist</strong></li>
+                    <li id="playlist-name"> <strong>Emily in Paris 2 (2021)</strong></li>
+                    <li id="playlist-brand">Netflix 2021</li>
+                    <li id="playlist-numbers"> <strong>Sesame....</strong></li>
+                </ul>
+
+            </section>
+
+            <div class="sticky">
+
+                <button class="start-stop sticky-element-sx"></button>
+                <button class="heart-icon sticky-element-sx"></button>
+                <button class="download-icon sticky-element-sx"></button>
+                <span class="three-p-icon sticky-element-sx">...</span>
+                <span class="icon search-icon sticky-element-dx"></span>
+                <span class=" custom-menu sticky-element-dx">
+                    <div class="dropdown">
+                        <button class="dropbtn">Ordinamento Personalizzato</button>
+                        <div class="dropdown-content">
+                            <a href="#">Ordinamento Personalizzato</a>
+                            <a href="#">Titolo</a>
+                            <a href="#">Artista</a>
+                            <a href="#">Album</a>
+                            <a href="#">Aggiunto il giorno</a>
+                            <a href="#">Durata</a>
+                        </div>
+                    </div>
+                </span>
+
+                <div class="row">
+                    <div class="column first-column">#</div>
+                    <div class="column">TITOLO</div>
+                    <div class="column">ALBUM</div>
+                    <div class="column">AGGIUNTO IL</div>
+                    <div class="column">TIME</div>
+                </div>
+
+
+            </div>
+
+            <ul class="list-of-songs">
+                <li>
+                    <span class="track-number item-of-playlist">1</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track1"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Je veux</li>
+                        <li class="track-artist">Zaz</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:39</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">2</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track2"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Les Passants</li>
+                        <li class="track-artist">Zaz</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:33</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">3</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track3"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Mon Soleil</li>
+                        <li class="track-artist">Ashley Park</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:23</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">4</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track4"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Hit Sale</li>
+                        <li class="track-artist">Therapie TAXI</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:03</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">5</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track5"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Eté 90</li>
+                        <li class="track-artist">Therapie TAXI</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:05</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">6</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track6"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Falling Slowly</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:07</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">7</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track7"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Just One Dance</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:32</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">8</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track8"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Métre Gims</li>
+                        <li class="track-artist">La Méme</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:24</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">9</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track9"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Alors On Danse</li>
+                        <li class="track-artist">Stromae</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:25</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">10</span>
+                    <button class="shape-of-album-img item-of-playlist btn-track10"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Balance ton quoi</li>
+                        <li class="track-artist">Angéle</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:08</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">11</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">12</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">13</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">14</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">15</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">16</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">17</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">18</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">19</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">20</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+
+                <li>
+                    <span class="track-number item-of-playlist">21</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">22</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">23</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">24</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">25</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">26</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">27</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">28</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">29</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">30</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">31</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">32</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">33</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">34</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">35</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">36</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">37</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">38</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">39</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">40</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+
+                <li>
+                    <span class="track-number item-of-playlist">41</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">42</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">43</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">44</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">45</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">46</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+                <li>
+                    <span class="track-number item-of-playlist">47</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">48</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">49</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">50</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">51</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">52</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">53</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">54</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">55</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">56</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">57</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">58</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">59</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+                <li>
+                    <span class="track-number item-of-playlist">60</span>
+                    <button class="shape-of-album-img item-of-playlist"></button>
+                    <ul class="title-artist">
+                        <li class="track-title">Title Song</li>
+                        <li class="track-artist">Artist</li>
+                    </ul>
+                    <span class="track-album">Album Title</span>
+                    <span class="track-time">Released 11 days ago</span>
+                    <span class="track-lenght">3:18</span>
+                </li>
+
+            </ul>
+
+
+        </section>
+
+        <section class="flex-child right-section">
+
+            <ul id="home-search-library" class="list">
+                <li>
+                    <h4>Attvità Amici</h4>
+                </li>
+                <li class="mouseover">Consenti ad amici e follower su Spotify di visualizzare cosa stai ascoltando</li>
+                <li><span class="icon profile-icon"></span><span class="text mouseover">Amico Online</span></li>
+                <li><span class="icon profile-icon"></span><span class="text mouseover">Amico Online</span></li>
+                <li><span class="icon profile-icon"></span><span class="text mouseover">Amico Online</span></li>
+                <li class="mouseover">Vai a Impostazioni > Social e abilita "Condividi la mia attività di ascolto su Spotify. Puoi disattivare questa funzione quando vuoi"
+                </li>
+                <li><button style="font-size:30px;cursor:pointer" onclick="openNav()" class="button-style button-text">IMPOSTAZIONI</button> </li>
+
+                <div class="flex-child left-child">
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="#">About</a>
+                            <a href="#">Servizi</a>
+                            <a href="#">Clienti</a>
+                            <a href="#">Contatti</a>
+                        </div>
+                    </div>
+
+            </ul>
+        </section>
+
+
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-container">
+
+            <div class="footer-child left-section-footer">
+
+                <span class="album-icon-playingtime footer-element-sx"></span>
+                <span class="title-artist-playingtime footer-element-sx mouseover">Title - Artist</span>
+
+            </div>
+
+            <div class="footer-child middle-section-footer">
+                <div class="mp3-player">
+                    <span class="mp3-player-item mp3-player-item-left"></span>
+                    <span class="mp3-player-item mp3-player-item-middle"></span>
+                    <span class="mp3-player-item mp3-player-item-right"></span>
+                </div>
+
+                <!-- MUSIC PLAYER-->
+
+                <footer class="footer-container">
+                    <div class="musicplayer-container display"></div>
+            </div>
+
+            <div class="footer-child right-section-footer"></div>
+
+        </div>
+
+
+
+        </footer>
+
+        <script src="spotify.1.00.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,622 @@
+/* STRUCTURE OF THE PAGE*/
+
+body {
+    margin: 0;
+}
+
+#flex-container {
+    display: flex;
+}
+
+.central-section {
+    margin-left: 20%;
+    height: 100%;
+    width: 60%;
+    background-color: rgba(25, 20, 20, 0.97);
+}
+
+.left-section,
+.right-section {
+    width: 20%;
+    height: 100%;
+    z-index: 9;
+    overflow-x: hidden;
+    background-color: rgb(25 20 20);
+}
+
+.right-section {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.left-section {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(25, 20, 20, 0.97);
+    z-index: 99;
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ LEFT SECTION STYLING $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+* {
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: rgb(236, 235, 232);
+}
+
+
+/* STYLE AND POSITION ITEM'LIST AND , DISTANCE BETWEEN LISTS*/
+
+.list {
+    list-style: none;
+}
+
+.list>li {
+    margin-bottom: 20px;
+}
+
+.playlist-setup {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/*  TEST*/
+
+.mouseover:hover,
+.mouseover a:focus {
+    color: white;
+}
+
+
+/* ICON FOR EVERY LIST ITEM*/
+
+.icon {
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* STYLE EVREY ICON*/
+
+.spotify-icon {
+    background-image: url(img/spotify_logo.png);
+}
+
+.home-icon {
+    background-image: url(img/home_icon.png);
+}
+
+.search-icon {
+    background-image: url(img/search_icon.png);
+}
+
+.mylibrary-icon {
+    background-image: url(img/mylibrary_icon.png);
+}
+
+
+/* STYLE THE PLAYLIST ITEM*/
+
+.createplaylist-icon {
+    background-image: url(img/createalbum_icon.png);
+}
+
+.preferredsong-icon {
+    background-image: url(img/preferiti_icon.png);
+}
+
+
+/* STYLE THE PLAYING TIME ALBUM ITEM*/
+
+.playingtime-icon {
+    background-image: url(img/emilyinapris_icon.jpeg);
+    position: relative;
+    top: 10px;
+    left: 7.5px;
+}
+
+
+/* STYLE THE TEXT FOLLOWING EVERY ICON*/
+
+.text {
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+}
+
+#breakline {
+    color: rgb(236, 235, 232);
+    margin-right: 20%;
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ RIGHT SECTION STYLING $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+.profile-icon {
+    background-image: url(img/profile_icon.png);
+}
+
+.button-style {
+    color: black;
+    width: 90%;
+    height: 50px;
+    border-radius: 20%;
+    border: none;
+}
+
+.button-text {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&& SETTING MENU &&&&&&&&&&&&&&&&&&&&&&&&*/
+
+
+/* The Overlay (background) */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    right: 0;
+    top: 57.5%;
+    /* CHANGE IT ON SPOTIFY */
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgb(64, 64, 64);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* The navigation links inside the overlay */
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+
+/* Position the close button (top right corner) */
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ CENTRAL SECTION STYLING $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+.header-container {
+    display: flex;
+    height: 60vh;
+    background-image: linear-gradient(#CD5C5C, rgb(25 20 20));
+}
+
+.header-child {
+    position: relative;
+    left: 2.5%;
+    top: 20%;
+}
+
+.playlist-img {
+    height: 275px;
+    width: 275px;
+    background-image: url(img/emilyinapris_icon.jpeg);
+    background-size: cover;
+}
+
+.playlist-feature {
+    list-style-type: none;
+    position: relative;
+    top: 45%;
+}
+
+.playlist-feature>li {
+    margin-bottom: 10px;
+}
+
+
+/* STYLE THE TEXT OF THE PLAYLIST FEATURES */
+
+#playlist-name {
+    font-size: 40px;
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& SCROLL BAR STYLE &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgba(25, 20, 20, 0.97);
+    height: 120px;
+    z-index: 99;
+}
+
+.start-stop {
+    background-color: rgb(30 215 96);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+}
+
+
+/* STYLE ITEM INSIDE SCROLLBAR ON THE LEFT SIDE */
+
+.sticky-element-sx {
+    margin-left: 20px;
+}
+
+.heart-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-image: url(img/black_heart.png);
+    background-size: cover;
+    position: relative;
+    bottom: 5px;
+    border: none;
+}
+
+
+/* TEST) HO CREATO UN ATTRIBUTO CHE NON VIENE USATO, MA MI SERVIRà PER USARLO NEL MOMEMNTOIN CUI METTO  LIKE */
+
+
+/* DOMANDA PROF) --> è BUON USO UTILIZZARE IL METODO DEL REPLACE IMG ?? */
+
+.heart-icon-replace {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-image: url(img/preferiti_icon.png);
+    background-size: cover;
+    position: relative;
+    bottom: 5px;
+    border: none;
+}
+
+
+/* FINE TEST */
+
+.download-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-image: url(img/download_icon.jpeg);
+    background-size: cover;
+    position: relative;
+    bottom: 5px;
+    border: none;
+}
+
+.three-p-icon {
+    font-size: 40px;
+    position: relative;
+    bottom: 15px;
+}
+
+
+/* STYLE ITEM INSIDE SCROLLBAR ON THE RIGHT SIDE */
+
+.sticky-element-dx {
+    margin-right: 10px;
+    position: relative;
+    bottom: 5px;
+    left: 35%;
+}
+
+.custom-menu {
+    position: relative;
+    bottom: 17.5px;
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&& STYLE THE MENU DROPDOWN &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+.dropbtn {
+    background-color: rgba(25, 20, 20, 0.97);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(64, 64, 64);
+    width: 100%;
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: #f1f1f1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: rgb(80, 75, 75);
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(30 215 96);
+}
+
+
+/* DISPLY GRID (5 COLUMN) FIVE ITEM REFERED TO THE PLAYLIST(NUMERO BRANO,SONG,PLAYLIST,TIME,UPLOAD)  */
+
+.column {
+    float: left;
+    width: 24%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 2.5px;
+}
+
+.first-column {
+    float: left;
+    width: 2.5%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& LIST OF SONGS &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+.column {
+    float: left;
+    width: 24%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 2.5px;
+    text-align: center;
+}
+
+.first-column {
+    float: left;
+    width: 2.5%;
+    text-align: center;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* STYLE AND CREATE ONE ROW OF THE PLAYLIST */
+
+.list-of-songs>li {
+    list-style: none;
+    margin-bottom: -20px;
+}
+
+.list-of-songs li:hover {
+    background-color: rgb(80, 75, 75);
+}
+
+
+/* STYLE THE TITLE ITEM: IMG + SONGS AND ARTIST */
+
+.track-number {
+    position: relative;
+    right: 3.5%;
+    bottom: 15px;
+}
+
+.shape-of-album-img {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    display: inline-block;
+    background-image: url(img/emilyinapris_icon.jpeg);
+    position: relative;
+    right: 15px;
+    border: none;
+}
+
+.title-artist>li {
+    list-style: none;
+    position: relative;
+    left: 2.5%;
+    bottom: 40px;
+}
+
+.track-artist {
+    font-size: 15px;
+}
+
+.track-album {
+    position: relative;
+    left: 33%;
+    bottom: 65px;
+}
+
+.track-time {
+    position: relative;
+    bottom: 65px;
+    left: 45.5%;
+}
+
+.track-lenght {
+    position: relative;
+    bottom: 65px;
+    left: 55.5%;
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  FOOTER STYLING $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+.footer-container {
+    display: flex;
+}
+
+.footer-child {
+    height: 80px;
+}
+
+.middle-section-footer {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 50%;
+}
+
+.left-section-footer,
+.right-section-footer {
+    width: 25%;
+}
+
+
+/* MUSIC PLAYER POSITIONING*/
+
+.musicplayer-container {
+    position: fixed;
+    bottom: 1.5%;
+    left: 40%;
+}
+
+
+/* STYLE THE ELEMENT FIXED IN THE LEFT SECTION FOOTER*/
+
+.album-icon-playingtime {
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    background-image: url(img/emilyinapris_icon.jpeg);
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+
+.title-artist-playingtime {
+    font-size: 20px;
+    position: relative;
+    left: 12.5%;
+    bottom: 10%;
+}
+
+.mp3-player-item {
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 7.5px;
+}
+
+.mp3-player-item-left {
+    background-image: url(img/left-button.jpeg);
+}
+
+.mp3-player-item-middle {
+    margin-left: 30px;
+    margin-right: 30px;
+    background-image: url(img/mid_button.jpeg);
+}
+
+.mp3-player-item-right {
+    background-image: url(img/right_button.jpeg);
+}
