@@ -437,110 +437,95 @@ div.sticky {
 }
 
 
-/* DISPLY GRID (5 COLUMN) FIVE ITEM REFERED TO THE PLAYLIST(NUMERO BRANO,SONG,PLAYLIST,TIME,UPLOAD)  */
+/*  TEST: STYLE LIST OF SONGS*/
 
-.column {
-    float: left;
-    width: 24%;
-    height: 100%;
-    margin-top: 20px;
-    margin-left: 2.5px;
+
+/* $$$$$$$$$$$$$$$$$$$$ SETTING FLEX-CONTAINER AND FLEX-ITEMS $$$$$$$$$$$$$$$$$$$$$$$ */
+
+.flex-container {
+    display: flex;
+    background-color: antiquewhite;
+    margin-bottom: 25px;
 }
 
-.first-column {
-    float: left;
-    width: 2.5%;
-}
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+.flex-container>.flex-item {
+    width: 25%;
+    text-align: start;
+    overflow: auto;
 }
 
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& LIST OF SONGS &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
-.column {
-    float: left;
-    width: 24%;
-    height: 100%;
-    margin-top: 20px;
-    margin-left: 2.5px;
-    text-align: center;
-}
 
-.first-column {
-    float: left;
+/* $$$$$$$$$$$$$$$$$$$$ STYLING OF FLEX-ITEMS $$$$$$$$$$$$$$$$$$$$$$$ */
+
+.flex-item-0 {
+    background-color: rgba(25, 20, 20, 0.97);
+    /* background-color: violet; */
     width: 2.5%;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* FLEX-ITEM-0 BECAME FLEX-CONTAINER-2GENERATION, IN ORDER TO POSITION EASILY THE ITEMS INSIDE, IMG AND SPAN TEXT */
 }
 
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+.flex-item-1 {
+    background-color: rgba(25, 20, 20, 0.97);
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* FLEX-ITEM-1 BECAME FLEX-CONTAINER-2GENERATION, IN ORDER TO POSITION EASILY THE ITEMS INSIDE, SPAN TEXT */
+}
+
+.flex-item-2 {
+    background-color: rgba(25, 20, 20, 0.97);
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* FLEX-ITEM-2 BECAME FLEX-CONTAINER-2GENERATION, IN ORDER TO POSITION EASILY THE ITEMS INSIDE,  SPAN TEXT */
+}
+
+.flex-item-3 {
+    background-color: rgba(25, 20, 20, 0.97);
+    /* background-color: chartreuse; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* FLEX-ITEM-3 BECAME FLEX-CONTAINER-2GENERATION, IN ORDER TO POSITION EASILY THE ITEMS INSIDE, SPAN TEXT */
+}
+
+.flex-item-4 {
+    background-color: rgba(25, 20, 20, 0.97);
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* FLEX-ITEM-4 BECAME FLEX-CONTAINER-2GENERATION, IN ORDER TO POSITION EASILY THE ITEMS INSIDE, IMG AND SPAN TEXT */
 }
 
 
-/* STYLE AND CREATE ONE ROW OF THE PLAYLIST */
+/* $$$$$$$$$$$$$$$$$$$$ STYLING, POSITIONING DEGLI ELEMENTI PRESSENTI IN OGNI FLEX ITEM $$$$$$$$$$$$$$$$$$$$$$$ */
 
-.list-of-songs>li {
-    list-style: none;
-    margin-bottom: -20px;
+.flex-margin>span {
+    margin-left: 5%;
 }
 
-.list-of-songs li:hover {
-    background-color: rgb(80, 75, 75);
+img {
+    width: 50px;
+    height: 50px;
+    margin-left: 2.5%;
 }
 
-
-/* STYLE THE TITLE ITEM: IMG + SONGS AND ARTIST */
-
-.track-number {
-    position: relative;
-    right: 3.5%;
-    bottom: 15px;
-}
-
-.shape-of-album-img {
-    height: 40px;
-    width: 40px;
-    background-size: cover;
+span {
     display: inline-block;
-    background-image: url(img/emilyinapris_icon.jpeg);
-    position: relative;
-    right: 15px;
-    border: none;
 }
 
-.title-artist>li {
-    list-style: none;
-    position: relative;
-    left: 2.5%;
-    bottom: 40px;
-}
-
-.track-artist {
-    font-size: 15px;
-}
-
-.track-album {
-    position: relative;
-    left: 33%;
-    bottom: 65px;
-}
-
-.track-time {
-    position: relative;
-    bottom: 65px;
-    left: 45.5%;
-}
-
-.track-lenght {
-    position: relative;
-    bottom: 65px;
-    left: 55.5%;
+.flex-text {
+    font-size: 20px;
 }
 
 

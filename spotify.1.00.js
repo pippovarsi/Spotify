@@ -111,7 +111,6 @@ const srcTrack = new Array(
     "audio/AngÃ¨le -  balance ton quoi (LYRICS).mp3", //track010 src
 )
 
-
 const button1 = document.querySelector(".btn-track1");
 const button2 = document.querySelector(".btn-track2");
 const button3 = document.querySelector(".btn-track3");
