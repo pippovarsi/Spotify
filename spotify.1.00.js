@@ -122,8 +122,7 @@ const button8 = document.querySelector(".btn-track8");
 const button9 = document.querySelector(".btn-track9");
 const button10 = document.querySelector(".btn-track10");
 
-const div = document.querySelector(".musicplayer-container")
-
+const div = document.querySelector(".musicplayer-container");
 
 button1.addEventListener("click", createAudioElement1);
 button2.addEventListener("click", createAudioElement2);
@@ -140,6 +139,7 @@ button10.addEventListener("click", createAudioElement10);
 // button3.addEventListener('click', createAudioElement.bind(srcTrack[2], srcTrack); // does't work
 
 //button3.addEventListener("click", createAudioElement(srcTrack[2], srcTrack)); // track number 3
+
 
 function createAudioElement1() {
 
@@ -622,62 +622,132 @@ function showFakeMusicPlayer() {
     shadowFakePlayer[2].classList.add("mp3-player-item-right");
 }
 
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ MANAGEMNT LIST OF SONGS $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ TEST $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
-/*
-const buttoni-esimo = document.querySelector(".btn-tracki-esima");
+class trackSong {
+    constructor(trackNumber, trackTitle, trackAlbum, trackDateOfRealesed, trackTime, trackSrc) {
 
-buttoni-esimo.addEventListener("click", createAudioElement(src-i-esimo, srcTrack));
+        this.trackNumber = trackNumber;
+        this.trackTitle = trackTitle;
+        this.trackAlbum = trackAlbum;
+        this.trackDateOfRealesed = trackDateOfRealesed;
+        this.trackTime = trackTime;
+        this.trackSrc = trackSrc;
+    }
+}
 
-// button3.addEventListener('click', createAudioElement.bind(srcTrack[2], srcTrack); // does't work
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ CHANGE ORDER OF THE COLUMN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
-function createAudioElement(src, array) {
+class List {
+    constructor(listOfTrackNumber, listOfTitle, listOfAlbum, listOfDateOfReleased, listOfTime) {
 
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
+        this.listOfTrackNumber = listOfTrackNumber;
+        this.listOfTime = listOfTitle;
+        this.listOfAlbum = listOfAlbum;
+        this.listOfDateOfReleased = listOfDateOfReleased;
+        this.listOfTime = listOfTime;
 
-    if (musicPlayerDisplay.classList.contains("display")) {
+    }
 
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
+    setValuesOfLists(classOfTrackColumn, classOfTitleColumn, classOfAlbumColumn, classOfReleasedColumn, classOfTimeColumn) {
 
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", src);
-
-        // in order to create a class considering the different  parametres for every button that I'll create
-        //const track = 'track';
-        //const className = track.concat((array.indexOf(src) + 1)); // track3 -->(indiceSrc + 1)
-        //audio.classList.add(className);
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(className);
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-
-        //let audio_src_value = audio.getAttribute("src");
+        sort.listOfTrackNumber = Array.from(document.querySelectorAll(classOfTrackColumn));
+        sort.listOfTitle = Array.from(document.querySelectorAll(classOfTitleColumn));
+        sort.listOfAlbum = Array.from(document.querySelectorAll(classOfAlbumColumn));
+        sort.listOfDateOfReleased = Array.from(document.querySelectorAll(classOfReleasedColumn));
+        sort.listOfTime = Array.from(document.querySelectorAll(classOfTimeColumn));
 
 
     }
+
+    getValuesOfLists(classOfTrackColumnValues, classOfTitleColumnValues, classOfAlbumColumnValues,
+        classOfReleasedColumnValues, classOfTimeColumnValues) {
+
+        console.log(classOfTrackColumnValues);
+        console.log(classOfTitleColumnValues);
+        console.log(classOfAlbumColumnValues);
+        console.log(classOfReleasedColumnValues);
+        console.log(classOfTimeColumnValues);
+
+    }
+
 }
-*/
+
+const sort = new List();
+
+sort.setValuesOfLists(".flex-item-0", ".flex-item-1", ".flex-item-2", ".flex-item-3", ".flex-item-4");
+// sort.getValuesOfLists(sort.listOfTrackNumber, sort.listOfTitle, sort.listOfAlbum, sort.listOfDateOfReleased, sort.listOfTime);
+
+// sorting album column
+const dropdownAlbum = document.querySelector(".album-order");
+
+dropdownAlbum.addEventListener("click", columnOrderByAlbum);
+
+function columnOrderByAlbum() {
+
+    positioning("1", "5", "2", "3", "4");
+
+    for (let i = 0; i < 61; i++) {
+
+        sort.listOfTrackNumber[i].style.order = "1";
+        sort.listOfAlbum[i].style.order = "2";
+        sort.listOfDateOfReleased[i].style.order = "3";
+        sort.listOfTime[i].style.order = "4";
+        sort.listOfTitle[i].style.order = "5";
+    }
+
+}
+
+// sorting date of released column
+const dropdownDateOfReleased = document.querySelector(".realesed-order");
+
+dropdownDateOfReleased.addEventListener("click", () => columnOrderByDateOfReleased());
+
+function columnOrderByDateOfReleased() {
+
+    positioning("1", "5", "2", "3", "4");
+
+}
+
+// sorting time column
+const dropdownTime = document.querySelector(".time-order");
+
+dropdownTime.addEventListener("click", () => columnOrderByTime());
+
+function columnOrderByTime() {
+
+    positioning("1", "3", "4", "5", "2");
+
+}
+
+// sorting title,artist and ordinamento personalizzato column, click on them and default position will be the activate
+
+const dropdownOrdinamentoPersonalizzato = document.querySelector(".default-order");
+
+dropdownOrdinamentoPersonalizzato.addEventListener("click", () => columnOrderByDefault());
+
+const dropdownTitle = document.querySelector(".title-order");
+
+dropdownTitle.addEventListener("click", () => columnOrderByDefault());
+
+const dropdownArtist = document.querySelector(".artist-order");
+
+dropdownArtist.addEventListener("click", () => columnOrderByDefault());
+
+function columnOrderByDefault() {
+
+    positioning("1", "2", "3", "4", "5");
+
+}
+
+function positioning(position1, position2, position3, position4, position5) {
+    for (let i = 0; i < 61; i++) {
+
+        sort.listOfTrackNumber[i].style.order = position1;
+        sort.listOfTitle[i].style.order = position2;
+        sort.listOfAlbum[i].style.order = position3;
+        sort.listOfDateOfReleased[i].style.order = position4;
+        sort.listOfTime[i].style.order = position5;
+
+    }
+}
