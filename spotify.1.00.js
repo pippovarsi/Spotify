@@ -1,3 +1,34 @@
+var listOfSongs = [];
+
+class TrackSong {
+    constructor(trackNumber, trackTitle, trackAlbum, trackDateOfRealesed, trackTime, trackSrc, buttonId) {
+
+        this.trackNumber = trackNumber;
+        this.trackTitle = trackTitle;
+        this.trackAlbum = trackAlbum;
+        this.trackDateOfRealesed = trackDateOfRealesed;
+        this.trackTime = trackTime;
+        this.trackSrc = trackSrc;
+        this.buttonId = buttonId;
+    }
+}
+
+
+listOfSongs.push(
+
+    new TrackSong(1, "Je veux", "This is Zaz", "Realesed 11 days ago", "3:39", "audio/Zaz - Je veux (Studio version, HD).mp3", ".btn-track1"),
+    new TrackSong(2, "Les Passants", "This is Zaz", "Realesed 11 days ago", "3:33", "audio/Zaz - Les Passants (Studio version, HD).mp3", ".btn-track2"),
+    new TrackSong(3, "Mon Soleil", "Emily in Paris(SoundTrack)", "Realesed 11 days ago", "3:23", "audio/Ashley Park - Mon Soleil (Lyrics) ( From Emily in Paris soundtrack).mp3",".btn-track3"),
+    new TrackSong(4, "Hit Sale", "Hits Sales Extra Cheese", "Realesed 11 days ago", "3:39", "audio/HIT SALE - Therapie TAXI  ft. RomÃ©o Elvis PAROLES.mp3", ".btn-track4"),
+    new TrackSong(5, "Eté 90", "Rapture 2 merde", "Realesed 11 days ago", "3:39", "audio/ThÃ©rapie Taxi - EtÃ© 90 (Paroles).mp3", ".btn-track5"),
+    new TrackSong(6, "Je veux", "Nature", "Realesed 11 days ago", "3:39","audio/Falling Slowly.mp3", ".btn-track6"),
+    new TrackSong(7, "Je veux", "Revolution", "Realesed 11 days ago", "3:39","audio/Just One Dance.mp3", ".btn-track7"),
+    new TrackSong(8, "Je veux", "Meme", "Realesed 11 days ago", "3:39","audio/MaÃ®tre Gims - La MÃªme ft Vianney (Lyrics).mp3", ".btn-track8"),
+    new TrackSong(9, "Je veux", "Danse", "Realesed 11 days ago", "3:39","audio/Stromae - Alors On Danse (Lyrics).mp3", ".btn-track9"),
+    new TrackSong(10, "Je veux", "This is Clere", "Realesed 11 days ago", "3:39", "audio/AngÃ¨le -  balance ton quoi (LYRICS).mp3", ".btn-track10"),
+    
+    )
+
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ SETTING MENU $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
 /* Open when someone clicks on the span element */
@@ -111,37 +142,12 @@ const srcTrack = new Array(
     "audio/AngÃ¨le -  balance ton quoi (LYRICS).mp3", //track010 src
 )
 
-const button1 = document.querySelector(".btn-track1");
-const button2 = document.querySelector(".btn-track2");
-const button3 = document.querySelector(".btn-track3");
-const button4 = document.querySelector(".btn-track4");
-const button5 = document.querySelector(".btn-track5");
-const button6 = document.querySelector(".btn-track6");
-const button7 = document.querySelector(".btn-track7");
-const button8 = document.querySelector(".btn-track8");
-const button9 = document.querySelector(".btn-track9");
-const button10 = document.querySelector(".btn-track10");
-
-const div = document.querySelector(".musicplayer-container");
-
-button1.addEventListener("click", createAudioElement1);
-button2.addEventListener("click", createAudioElement2);
-button3.addEventListener("click", createAudioElement3);
-button4.addEventListener("click", createAudioElement4);
-button5.addEventListener("click", createAudioElement5);
-button6.addEventListener("click", createAudioElement6);
-button7.addEventListener("click", createAudioElement7);
-button8.addEventListener("click", createAudioElement8);
-button9.addEventListener("click", createAudioElement9);
-button10.addEventListener("click", createAudioElement10);
+//controlMusicPlayerTrack(audio_src_value);
 
 
-// button3.addEventListener('click', createAudioElement.bind(srcTrack[2], srcTrack); // does't work
-
-//button3.addEventListener("click", createAudioElement(srcTrack[2], srcTrack)); // track number 3
-
-
-function createAudioElement1() {
+//const button1 = document.querySelector(".btn-track1");
+//button1.addEventListener("click", createAudioElement1);
+/*function createAudioElement1() {
 
 
     const musicPlayerDisplay = document.querySelector(".musicplayer-container");
@@ -189,52 +195,35 @@ function createAudioElement1() {
 
     //controlMusicPlayerTrack(audio_src_value);
 }
-
-function createAudioElement2() {
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/Zaz - Les Passants (Studio version, HD).mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
+*/
 
 
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
 
-        const audioElementInPlay = document.querySelector(".firstTrack");
+const button1 = document.querySelector(".btn-track1");
+const button2 = document.querySelector(".btn-track2");
+const button3 = document.querySelector(".btn-track3");
+const button4 = document.querySelector(".btn-track4");
+const button5 = document.querySelector(".btn-track5");
+const button6 = document.querySelector(".btn-track6");
+const button7 = document.querySelector(".btn-track7");
+const button8 = document.querySelector(".btn-track8");
+const button9 = document.querySelector(".btn-track9");
+const button10 = document.querySelector(".btn-track10");
 
-        audioElementInPlay.remove();
+const div = document.querySelector(".musicplayer-container");
 
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
+button1.addEventListener("click", () => createAudioElement("audio/Zaz - Je veux (Studio version, HD).mp3"));
+button2.addEventListener("click", () => createAudioElement("audio/Zaz - Les Passants (Studio version, HD).mp3"));
+button3.addEventListener("click", () => createAudioElement("audio/Ashley Park - Mon Soleil (Lyrics) ( From Emily in Paris soundtrack).mp3"));
+button4.addEventListener("click", () => createAudioElement("audio/HIT SALE - Therapie TAXI  ft. RomÃ©o Elvis PAROLES.mp3"));
+button5.addEventListener("click", () => createAudioElement("audio/ThÃ©rapie Taxi - EtÃ© 90 (Paroles).mp3"));
+button6.addEventListener("click", () => createAudioElement("audio/Falling Slowly.mp3"));
+button7.addEventListener("click", () => createAudioElement("audio/Just One Dance.mp3"));
+button8.addEventListener("click", () => createAudioElement("audio/MaÃ®tre Gims - La MÃªme ft Vianney (Lyrics).mp3"));
+button9.addEventListener("click", () => createAudioElement("audio/Stromae - Alors On Danse (Lyrics).mp3"));
+button10.addEventListener("click", () => createAudioElement("audio/AngÃ¨le -  balance ton quoi (LYRICS).mp3"));
 
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-    }
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
-
-function createAudioElement3() {
+function createAudioElement(trackPath) {
 
 
     const musicPlayerDisplay = document.querySelector(".musicplayer-container");
@@ -246,100 +235,7 @@ function createAudioElement3() {
 
         audio.setAttribute("controls", "");
         audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/Ashley Park - Mon Soleil (Lyrics) ( From Emily in Paris soundtrack).mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(".firstTrack");
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-
-
-    }
-
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
-
-function createAudioElement4() {
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/HIT SALE - Therapie TAXI  ft. RomÃ©o Elvis PAROLES.mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(".firstTrack");
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-    }
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
-
-function createAudioElement5() {
-
-
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/ThÃ©rapie Taxi - EtÃ© 90 (Paroles).mp3");
+        audio.setAttribute("src", trackPath);
 
         audio.classList.add("firstTrack");
 
@@ -376,235 +272,6 @@ function createAudioElement5() {
     //controlMusicPlayerTrack(audio_src_value);
 }
 
-function createAudioElement6() {
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/Falling Slowly.mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(".firstTrack");
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-    }
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
-
-function createAudioElement7() {
-
-
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/Just One Dance.mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(".firstTrack");
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-
-
-    }
-
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
-
-function createAudioElement8() {
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/MaÃ®tre Gims - La MÃªme ft Vianney (Lyrics).mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(".firstTrack");
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-    }
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
-
-function createAudioElement9() {
-
-
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/Stromae - Alors On Danse (Lyrics).mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(".firstTrack");
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-
-
-    }
-
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
-
-function createAudioElement10() {
-    const musicPlayerDisplay = document.querySelector(".musicplayer-container");
-
-    if (musicPlayerDisplay.classList.contains("display")) {
-
-        // CREATE AUDIO ELEMENT
-        const audio = document.createElement("audio");
-
-        audio.setAttribute("controls", "");
-        audio.setAttribute("autoplay", "");
-        audio.setAttribute("src", "audio/AngÃ¨le -  balance ton quoi (LYRICS).mp3");
-
-        audio.classList.add("firstTrack");
-
-        div.append(audio);
-
-        musicPlayerDisplay.classList.remove("display");
-        musicPlayerDisplay.classList.add("shadow");
-
-        //let audio_src_value = audio.getAttribute("src");
-
-        // SHADOW THE FAKE PLAYER
-
-        shadowFakeMusicPlayer();
-
-
-    } else if (musicPlayerDisplay.classList.contains("shadow")) {
-        // DELATE AUDIO ELEMENT
-
-        const audioElementInPlay = document.querySelector(".firstTrack");
-
-        audioElementInPlay.remove();
-
-        musicPlayerDisplay.classList.remove("shadow");
-        musicPlayerDisplay.classList.add("display");
-
-        // SHOW THE FAKE PLAYER
-
-        showFakeMusicPlayer();
-    }
-
-    //controlMusicPlayerTrack(audio_src_value);
-}
 
 function shadowFakeMusicPlayer() {
     const shadowFakePlayer = Array.from(document.querySelectorAll(".mp3-player-item"));
@@ -622,19 +289,6 @@ function showFakeMusicPlayer() {
     shadowFakePlayer[2].classList.add("mp3-player-item-right");
 }
 
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ MANAGEMNT LIST OF SONGS $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
-
-class trackSong {
-    constructor(trackNumber, trackTitle, trackAlbum, trackDateOfRealesed, trackTime, trackSrc) {
-
-        this.trackNumber = trackNumber;
-        this.trackTitle = trackTitle;
-        this.trackAlbum = trackAlbum;
-        this.trackDateOfRealesed = trackDateOfRealesed;
-        this.trackTime = trackTime;
-        this.trackSrc = trackSrc;
-    }
-}
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ CHANGE ORDER OF THE COLUMN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
